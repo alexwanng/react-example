@@ -17,12 +17,6 @@ import Hello from "./Hello";
 import "antd/dist/antd.css";
 import "./index.css";
 
-import loadable from "react-loadable";
-const D3Sample = loadable({
-  loader: () => import("./c38/D3Sample"),
-  loading: () => <div>Loading...</div>
-});
-
 const styles = {
   fontFamily: "sans-serif",
   paddingLeft: "250px"
