@@ -32,7 +32,9 @@ function BookList() {
 
 const Book = (props) => {
   const {img, title, author, children} = props;
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+      console.log(e.target);
+      console.log(e);
       alert('hello world');
   };
 
