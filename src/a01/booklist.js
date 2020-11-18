@@ -2,36 +2,30 @@ import React from "react";
 
 import "./booklist.css";
 
-const firstBook = {
-  img: "https://m.media-amazon.com/images/I/51QBoRpApkL.jpg",
-  title: "Devolution: A Firsthand Account of the Rainier Sasquatch",
-  author: "Max Brooks"
-};
+const books = [
+    {
+        img: "https://m.media-amazon.com/images/I/51QBoRpApkL.jpg",
+        title: "Devolution: A Firsthand Account of the Rainier Sasquatch",
+        author: "Max Brooks"
+    },
 
-const secondBook = {
-  img: "https://m.media-amazon.com/images/I/51n0VhTxftL._SY346_.jpg",
-  title: "The City We Became",
-  author: "N. K. Jemisin"
-};
+    {
+        img: "https://m.media-amazon.com/images/I/51n0VhTxftL._SY346_.jpg",
+        title: "The City We Became",
+        author: "N. K. Jemisin"
+    }
+];
+
+
+
 
 function BookList() {
   return (
     <section className="booklist">
-      <Book
-        img={firstBook.img}
-        title={firstBook.title}
-        author={firstBook.author}
-      >
-          <p>
-              here are some description for the book, which is children.
-          </p>
-      </Book>
-
-      <Book
-        img={secondBook.img}
-        title={secondBook.title}
-        author={secondBook.author}
-      />
+        {books.map((book) => {
+            const {img, title, author} = book;
+            return <Book img={img} title={title} author={author}/>
+        })}
     </section>
   );
 }
