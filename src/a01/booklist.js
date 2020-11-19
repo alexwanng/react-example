@@ -4,7 +4,7 @@ import "./booklist.css";
 
 import {books} from "./books";
 
-import Book from "./book";
+import SpecificBook from "./book";
 
 
 function BookList() {
@@ -12,7 +12,7 @@ function BookList() {
     <section className="booklist">
         {books.map((book, index) => {
             const {img, title, author} = book;
-            return <Book key={index} {...book}/>
+            return <SpecificBook key={index} {...book}/>
         })}
     </section>
   );
